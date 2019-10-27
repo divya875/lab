@@ -1,0 +1,36 @@
+<div class="col-md-4 col-md-offset-4" >
+  <div class="box-content profile">
+    <!--THIS IS FOR EDITING THE COURSE COMPONENT PLEASE FIND THE BELOW CODE. -->
+    <form [formGroup]="Formmodule" class="contact-form simple-form" (ngSubmit)="onFormSubmit(Formmodule.value)">
+      <fieldset>
+        <input formControlName="firstName" type="text" style="width: 80%;"  id="firstName" value={{module.firstName}} required>
+        <br>
+        <br>
+        <input formControlName="lastName" type="text" style="width: 80%;" id="lastName" value={{module.lastName}}>
+        <br>
+        <br>
+        <input formControlName="userName" type="text" style="width: 80%;" id="userName" value={{module.userName}} required>
+        <br>
+        <br>
+        <input formControlName="course1" type="text" style="width: 80%;" id="course1" value={{module.course1}} required>
+        <br>
+        <br>
+        <input formControlName="course2" type="text" style="width: 80%;" id="course2" value={{module.course2}} required>
+        <br>
+        <br>
+        <input formControlName="course3" type="text" style="width: 80%;" id="course3" value={{module.course3}} required>
+        <br>
+        <br>
+        <input formControlName="mobilenumber" type="text" style="width: 80%;" id="mobilenumber" value={{module.mobilenumber}} optional>
+        <br>
+        <br>
+      </fieldset>
+      <div class="button-row">
+        <button type="submit" [disabled]="!Formmodule.valid" mat-raised-button color="primary">
+          <mat-icon>save</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+

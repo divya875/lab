@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a routerLink="/login">Courses</a>
+  <a href="https://www.umkc.edu/calendar/">Calendar</a>
+  <a href="https://umkcmodulestore.com/">Module</a>
+  <div class="end">
+    <a><span  (click)="Profile()">Profile</span></a>
+    <a><span (click)="Signout()">logout</span></a>
+  </div>
+</div>
+
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+<app-module-landing-content></app-module-landing-content>
+
+
+
+
+<div class="bottom">
+
+
+
+
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8LMtONJEJLJyDHFRitCVT-AHqnX4rYi6rB1EmJ4owKAmjB-ia&s" alt="Avatar" class="avatar">Divya
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8LMtONJEJLJyDHFRitCVT-AHqnX4rYi6rB1EmJ4owKAmjB-ia&s" alt="Avatar" class="avatar">Bhashitha
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8LMtONJEJLJyDHFRitCVT-AHqnX4rYi6rB1EmJ4owKAmjB-ia&s" alt="Avatar" class="avatar">Haritha
+</div>
+
+</body>
+</html>
+
