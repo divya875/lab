@@ -5,7 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/mean-angular6')
+mongoose.connect('mongodb://localhost:27017/mean-angular6')
   .then(() => console.log('connection successful'))
   .catch((err) => console.error(err));
 
@@ -23,6 +23,7 @@ app.use('/book-create', express.static(path.join(__dirname, 'dist/mean-angular6'
 app.use('/course-edit/:id', express.static(path.join(__dirname, 'dist/mean-angular6')));
 app.use('/login', express.static(path.join(__dirname, 'dist/mean-angular6')));
 app.use('/dashboard', express.static(path.join(__dirname, 'dist/mean-angular6')));
+app.use('/calendar', express.static(path.join(__dirname, 'dist/mean-angular6')));
 app.use('/api', apiRouter);
 app.use('/checkUser', apiRouter);
 // catch 404 and forward to error handler

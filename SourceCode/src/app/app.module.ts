@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
   MatInputModule,
   MatPaginatorModule,
@@ -21,6 +22,9 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CourseComponent } from './course/course.component';
 import { CourseEditComponent } from './course-edit/course-edit.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 const appRoutes: Routes = [
   {
@@ -49,6 +53,11 @@ const appRoutes: Routes = [
 
   },
   {
+    path: 'calendar',
+    component: CalendarComponent ,
+
+  },
+  {
     path: 'dashboard/:id',
     component: DashboardComponent
   },
@@ -67,6 +76,7 @@ const appRoutes: Routes = [
     DashboardComponent,
     CourseComponent,
     CourseEditComponent,
+    CalendarComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -83,6 +93,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatFormFieldModule
   ],
   providers: [],
